@@ -1,0 +1,2 @@
+Commit 1(till video 112):
+created the client and server modules, added Models,controllers and routes to planets and imported the data
