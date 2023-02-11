@@ -5,7 +5,7 @@ const path = require("path");
 const habitablePlanets = [];
 
 function loadPlanetsData() {
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     fs.createReadStream(
       path.join(__dirname, "..", "..", "data", "kepler_data.csv")
     )
