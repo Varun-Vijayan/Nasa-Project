@@ -8,6 +8,7 @@ const { loadPlanetsData } = require(path.join(
   "models",
   "planets.model.js"
 ));
+const { loadLaunchesData } = require("./models/launches.model");
 
 const PORT = process.env.PORT || 5000;
 
@@ -16,6 +17,8 @@ const server = http.createServer(app);
 async function startServer() {
   await mongoConnect();
   await loadPlanetsData();
+  await loadLaunchesData();
+
   server.listen(PORT, (err) => {
     if (err) {
       console.log(err);
